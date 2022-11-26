@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gamification_Helper</string>
+    <string name="toMainMenu">В главное меню</string>
+    <string name="choice">Выбор</string>
+    <string name="ava">аватара</string>
+    <string name="closed_achievment">Закрытое достижение</string>
+</resources>
