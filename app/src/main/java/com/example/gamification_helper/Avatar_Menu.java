@@ -17,7 +17,7 @@ public class Avatar_Menu extends AppCompatActivity {
     private TextView coinViewAvatar, levelViewAvatar;
     private LinearLayout[] avatars;
     ImageView avatarImage;
-    private Drawable imageAvatarId;
+    private int imageAvatarId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,20 +43,22 @@ public class Avatar_Menu extends AppCompatActivity {
                 frog, alien, knight, monster, rapper,
                 zombie, mouse, spaceman, stealman
         };
+
         listenerSetter();
     }
 
     private void listenerSetter() {
+        int i = 0;
         for (LinearLayout curLayout : avatars) {
             curLayout.setOnClickListener(v -> avatarSetter(curLayout));
+            curLayout.setTag(i++);
         }
     }
 
     private void avatarSetter(LinearLayout chosenAvatar) {
         for (LinearLayout curAvatar : avatars) {
             if (curAvatar == chosenAvatar) {
-                ImageView getImageAvatar = (ImageView) curAvatar.getChildAt(0);
-                imageAvatarId = getImageAvatar.getDrawable();
+                imageAvatarId = (int) chosenAvatar.getTag();
                 chosenAvatar.setBackgroundResource(R.drawable.round_back_fon);
             }
             else
@@ -70,5 +72,10 @@ public class Avatar_Menu extends AppCompatActivity {
         finish();
     }
 
-    public void acceptNewAvatar(View view) { HatMaker.makeNewAvatar(avatarImage, imageAvatarId);    }
+    public void acceptNewAvatar(View view) {
+         DataBaseGetter.changeAvatar(imageAvatarId);
+         avatarImage.setImageResource(
+                 DataBaseGetter.avatarsDrawable[imageAvatarId]
+         );
+    }
 }

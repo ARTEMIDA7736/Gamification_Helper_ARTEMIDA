@@ -27,6 +27,4 @@ public class Achievments_Activity extends AppCompatActivity {
         startActivity(startMainMenu);
         finish();
     }
-
-
 }

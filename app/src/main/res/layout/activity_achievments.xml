@@ -45,87 +45,301 @@
                 android:id="@+id/fromMenuToAchievementsFromAchievements"
                 android:onClick="startMenuActivityFromAchievements"
                 android:text="@string/toMainMenu"/>
-            <ScrollView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <LinearLayout
+                <TextView
+                    android:id="@+id/pageName"
+                    android:layout_width="271dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:gravity="center"
+                    android:text="Достижения"
+                    android:textSize="44dp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="76dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/goblet_rgg16f93o91g"
+                    android:layout_alignLeft="@+id/pageName"/>
+
+
+                <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_below="@+id/pageName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="60dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginVertical="10dp"
+                        android:orientation="vertical">
 
-                        android:id="@+id/achievment_1">
-                        <ImageView
+                        <LinearLayout
+                            android:id="@+id/MainLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="60dp"
+                            android:orientation="vertical">
 
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/cardview_dark_background"/>
-                        <TextView
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:text="@string/closed_achievment"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginVertical="10dp"
-                        android:id="@+id/achievment_2">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/cardview_dark_background"/>
-                        <TextView
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
 
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:text="@string/closed_achievment"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginVertical="10dp"
-                        android:id="@+id/achievment_3">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/cardview_dark_background"/>
-                        <TextView
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:text="@string/closed_achievment"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginVertical="10dp"
-                        android:id="@+id/achievment_4">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/cardview_dark_background"/>
-                        <TextView
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:text="@string/closed_achievment"/>
-                    </LinearLayout>
-                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
 
-            </ScrollView>
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n1" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 1"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n2" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 2"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n3" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 3"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n4" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 4"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 5"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/n6" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="22dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/ach6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Achievement 6"
+                                        android:textColor="@color/black"
+                                        android:textSize="26dp" />
+                                </LinearLayout>‑
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+            </RelativeLayout>
         </LinearLayout>
 
     </LinearLayout>

@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Level_Menu extends AppCompatActivity {
     private TextView coinViewLevelMenu, levelViewLevelMenu;
@@ -34,8 +36,9 @@ public class Level_Menu extends AppCompatActivity {
                 level_7 = findViewById(R.id.level_7),
                 level_8 = findViewById(R.id.level_8);
 
-        level_list = new LinearLayout[]{
-                level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8
+        level_list = new LinearLayout[] {
+                level_1, level_2, level_3, level_4,
+                level_5, level_6, level_7, level_8
         };
 
         setAllLevelButtonListeners();
@@ -45,16 +48,26 @@ public class Level_Menu extends AppCompatActivity {
 
     private void backGroundSetter(LinearLayout currentLevel) {
         for (LinearLayout curLayout : level_list) {
-            if (curLayout == currentLevel)
+            if (curLayout == currentLevel) {
                 currentLevel.setBackgroundResource(R.drawable.round_back_white_stroke10);
+                int chosenLevel = (int) currentLevel.getTag(),
+                    currentPlayerLevel = DataBaseGetter.getLevel() + 1;
+                if (currentPlayerLevel <= chosenLevel) {
+                    Toast toast = Toast.makeText(this, "Сперва пройдите уровень " + currentPlayerLevel + "!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP, 0,160);   // import android.view.Gravity;
+                    toast.show();
+                }
+            }
             else
                 curLayout.setBackgroundResource(R.drawable.round_back_red);
         }
     }
 
     private void setAllLevelButtonListeners() {
+        int i = 0;
         for (LinearLayout curLayout : level_list) {
             curLayout.setOnClickListener(v -> backGroundSetter(curLayout));
+            curLayout.setTag(i++);
         }
     }
 

@@ -3,6 +3,7 @@ package com.example.gamification_helper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,6 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
         coinViewMainMenu = findViewById(R.id.CoinCounterMainMenu);
         levelViewMainMenu = findViewById(R.id.LevelCounterMainMenu);
 

@@ -31,34 +31,65 @@
                 android:id="@+id/CoinCounterMainMenu"
                 android:layout_margin="10dp"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/fromMenuToAchievementsFromMainMenu"
+                    android:onClick="startAchievementActivityFromMainMenu"
+                    android:text="К Достижениям"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/fromMenuToLevelFromMainMenu"
+                    android:onClick="startLevelActivityFromMainMenu"
+                    android:text="К Уровням"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:onClick="startAvatarActivityFromMainMenu"
+                    android:id="@+id/fromMenuToAvatarFromMainMenu"
+                    android:text="К Аватарам"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="328dp"
+                android:layout_height="93dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="144dp"
+                android:fontFamily="@font/d9464_arkhip_font"
+                android:text="Gamification Assistant"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:textAlignment="center"
+                android:textColor="@color/text_color"
+                android:textSize="34dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:id="@+id/fromMenuToAchievementsFromMainMenu"
-                android:onClick="startAchievementActivityFromMainMenu"
-                android:text="К Достижениям"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:id="@+id/fromMenuToLevelFromMainMenu"
-                android:onClick="startLevelActivityFromMainMenu"
-                android:text="К Уровням"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:onClick="startAvatarActivityFromMainMenu"
-                android:id="@+id/fromMenuToAvatarFromMainMenu"
-                android:text="К Аватарам"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="237dp"
+                app:srcCompat="@drawable/gamepad_png12_1__1_" />
         </LinearLayout>
 
     </LinearLayout>
