@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
