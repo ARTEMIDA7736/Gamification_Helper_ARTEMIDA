@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.logging.Level;
 
 public class Level_Menu extends AppCompatActivity {
     private TextView coinViewLevelMenu, levelViewLevelMenu;
     private LinearLayout[] level_list;
     private ImageView avatarImage;
     private int chosenLevel;
+    private Class[] listOfIntents;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,11 @@ public class Level_Menu extends AppCompatActivity {
         level_list = new LinearLayout[] {
                 level_1, level_2, level_3, level_4,
                 level_5, level_6, level_7, level_8
+        };
+
+        listOfIntents = new Class[] {
+                Level_1.class, Level_2.class, Level_3.class, Level_4.class,
+                Level_5.class, Level_6.class, Level_7.class, Level_8.class
         };
 
         setAllLevelButtonListeners();
@@ -77,21 +84,23 @@ public class Level_Menu extends AppCompatActivity {
         finish();
     }
 
+    private void startNewLevel(Class chosenLevel) {
+        startActivity(
+                new Intent(Level_Menu.this, chosenLevel)
+        );
+    }
+
     public void startNewLevel(View view) {
         int currentPlayerLevel = DataBaseGetter.getLevel() + 1;
         if (currentPlayerLevel <= chosenLevel) {
-            Toast toast = Toast.makeText(this, "Сперва пройдите уровень " + currentPlayerLevel + "!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(
+                    this, "Сперва пройдите уровень " +
+                            currentPlayerLevel + "!", Toast.LENGTH_LONG
+            );
             toast.setGravity(Gravity.TOP, 0,160);   // import android.view.Gravity;
             toast.show();
         }
         else
-            switch (chosenLevel) {
-                case (0):
-                    startActivity(
-                            new Intent(Level_Menu.this, Activity_level_1.class)
-                    );
-                case (1):
-                    ;
-            }
+            startNewLevel(listOfIntents[chosenLevel]);
     }
 }

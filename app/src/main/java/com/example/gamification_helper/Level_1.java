@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Activity_level_1 extends AppCompatActivity {
+public class Level_1 extends AppCompatActivity {
     private String selectedTopic = "";
 
     @Override
