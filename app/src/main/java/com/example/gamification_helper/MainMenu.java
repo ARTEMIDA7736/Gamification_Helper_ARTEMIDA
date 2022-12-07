@@ -3,11 +3,8 @@ package com.example.gamification_helper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,13 +17,13 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         coinViewMainMenu = findViewById(R.id.CoinCounterMainMenu);
         levelViewMainMenu = findViewById(R.id.LevelCounterMainMenu);
-
         avatarImage = findViewById(R.id.avatarView);
         HatMaker.makeHat(levelViewMainMenu, coinViewMainMenu, avatarImage);
-
+        avatarImage.setOnClickListener(view -> startAvatarActivityFromMainMenu());
     }
 
-    public void startAvatarActivityFromMainMenu(View view) {
+
+    public void startAvatarActivityFromMainMenu() {
         Intent startAvatarMenu = new Intent(this, Avatar_Menu.class);
         startActivity(startAvatarMenu);
     }

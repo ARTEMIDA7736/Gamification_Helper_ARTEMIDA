@@ -4,21 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ezgif_com_gif_maker"
     tools:context=".MainMenu">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:id="@+id/avatarView"
-                android:background="@color/white"/>
+                android:id="@+id/avatarView"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,66 +27,66 @@
                 android:id="@+id/CoinCounterMainMenu"
                 android:layout_margin="10dp"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="10dp"
-                    android:id="@+id/fromMenuToAchievementsFromMainMenu"
-                    android:onClick="startAchievementActivityFromMainMenu"
-                    android:text="К Достижениям"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="10dp"
-                    android:id="@+id/fromMenuToLevelFromMainMenu"
-                    android:onClick="startLevelActivityFromMainMenu"
-                    android:text="К Уровням"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="10dp"
-                    android:onClick="startAvatarActivityFromMainMenu"
-                    android:id="@+id/fromMenuToAvatarFromMainMenu"
-                    android:text="К Аватарам"/>
-            </LinearLayout>
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="328dp"
-                android:layout_height="93dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="144dp"
-                android:fontFamily="@font/d9464_arkhip_font"
-                android:text="Gamification Assistant"
-                android:shadowColor="@color/text_shadow"
-                android:shadowDx="1"
-                android:shadowDy="4"
-                android:shadowRadius="2"
-                android:textAlignment="center"
-                android:textColor="@color/text_color"
-                android:textSize="34dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/GoToLevels"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="@color/dark_buttons"
+        android:text="Уровни"
+        android:onClick="startLevelActivityFromMainMenu"
+        android:textColor="@color/color_text_buttons"
+        app:cornerRadius="35dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/d9464_arkhip_font"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="97dp"
-                android:layout_marginTop="237dp"
-                app:srcCompat="@drawable/gamepad_png12_1__1_" />
-        </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/GoToAchievments"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="@color/dark_buttons"
+        android:text="Достижения"
+        android:onClick="startAchievementActivityFromMainMenu"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:textColor="@color/color_text_buttons"
+        android:fontFamily="@font/d9464_arkhip_font"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:gravity="center"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/d9464_arkhip_font"
+        android:text="Gamification Assistant"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="6"
+        android:shadowRadius="2"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:foregroundGravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="237dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gamepad_png12_1__1_" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

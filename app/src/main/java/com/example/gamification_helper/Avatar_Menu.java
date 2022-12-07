@@ -28,7 +28,6 @@ public class Avatar_Menu extends AppCompatActivity {
 
         avatarImage = findViewById(R.id.avatarView);
         HatMaker.makeHat(levelViewAvatar, coinViewAvatar, avatarImage);
-
         final LinearLayout frog = findViewById(R.id.frog),
                 alien = findViewById(R.id.alien),
                 knight = findViewById(R.id.knight),
@@ -78,4 +77,5 @@ public class Avatar_Menu extends AppCompatActivity {
                  DataBaseGetter.avatarsDrawable[imageAvatarId]
          );
     }
+
 }

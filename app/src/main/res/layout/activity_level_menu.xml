@@ -5,22 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Level_Menu"
+    android:background="@drawable/ezgif_com_gif_maker"
     >
 
     <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:background="@drawable/ezgif_com_gif_maker"
+        android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:id="@+id/avatarView"
-                android:background="@color/white"/>
+                android:id="@+id/avatarView"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,24 +31,31 @@
                 android:layout_margin="10dp"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:id="@+id/fromMenuFromLevelMenu"
-                android:onClick="startMenuActivityFromLevelMenu"
-                android:text="@string/toMainMenu"/>
-        </LinearLayout>
-    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/GoToCurrentLevel"
+        android:textAppearance="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="70dp"
+        android:textSize="25dp"
+        android:backgroundTint="@color/dark_buttons"
+        android:text="Начать"
+        android:fontFamily="@font/d9464_arkhip_font"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:textColor="@color/color_text_buttons"
+        app:cornerRadius="35dp"
+        android:onClick="startNewLevel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/d9464_arkhip_font"
         android:text="Выбор уровней"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -62,16 +66,21 @@
     <ScrollView
         android:layout_width="391dp"
         android:layout_height="400dp"
+        android:layout_above="@+id/GoToCurrentLevel"
         android:layout_below="@+id/textView3"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
+
+            // Начало первой линии
+
             <LinearLayout
                 android:id="@+id/line_1"
                 android:layout_width="match_parent"
@@ -103,9 +112,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 1"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -126,12 +136,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 2"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
+            // Конец первой линии
+
+
+            // Начало второй линии
+
             <LinearLayout
                 android:id="@+id/line_2"
                 android:layout_width="match_parent"
@@ -162,9 +178,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 3"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -185,13 +202,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 4"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
+            // Конец второй линии
+
+            // Начало третьей линии
+
             <LinearLayout
                 android:id="@+id/line_3"
                 android:layout_width="match_parent"
@@ -223,9 +245,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 5"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -246,12 +269,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 6"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
+            // Конец третьей линии
+
+            // Начало четвёртой линии
+
             <LinearLayout
                 android:id="@+id/line_4"
                 android:layout_width="match_parent"
@@ -287,9 +315,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 7"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -310,15 +339,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/d9464_arkhip_font"
                         android:text="Уровень 8"
-                        android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textColor="@color/color_text_buttons"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
+            // Конец четвёртой линии
 
         </LinearLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

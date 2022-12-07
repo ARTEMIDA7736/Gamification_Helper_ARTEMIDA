@@ -16,6 +16,7 @@ public class Level_Menu extends AppCompatActivity {
     private TextView coinViewLevelMenu, levelViewLevelMenu;
     private LinearLayout[] level_list;
     private ImageView avatarImage;
+    private int chosenLevel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,7 @@ public class Level_Menu extends AppCompatActivity {
 
         avatarImage = findViewById(R.id.avatarView);
         HatMaker.makeHat(levelViewLevelMenu, coinViewLevelMenu, avatarImage);
-
+        avatarImage.setOnClickListener(view -> startAvatarActivityFromLevel());
         final LinearLayout level_1 = findViewById(R.id.level_1),
                 level_2 = findViewById(R.id.level_2),
                 level_3 = findViewById(R.id.level_3),
@@ -45,18 +46,17 @@ public class Level_Menu extends AppCompatActivity {
 
     }
 
+    private void startAvatarActivityFromLevel() {
+        Intent startAvatarMenu = new Intent(this, Avatar_Menu.class);
+        startActivity(startAvatarMenu);
+    }
+
 
     private void backGroundSetter(LinearLayout currentLevel) {
         for (LinearLayout curLayout : level_list) {
             if (curLayout == currentLevel) {
                 currentLevel.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                int chosenLevel = (int) currentLevel.getTag(),
-                    currentPlayerLevel = DataBaseGetter.getLevel() + 1;
-                if (currentPlayerLevel <= chosenLevel) {
-                    Toast toast = Toast.makeText(this, "Сперва пройдите уровень " + currentPlayerLevel + "!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.TOP, 0,160);   // import android.view.Gravity;
-                    toast.show();
-                }
+                chosenLevel = (int) currentLevel.getTag();
             }
             else
                 curLayout.setBackgroundResource(R.drawable.round_back_red);
@@ -75,5 +75,23 @@ public class Level_Menu extends AppCompatActivity {
         Intent startMainMenu = new Intent(this, MainMenu.class);
         startActivity(startMainMenu);
         finish();
+    }
+
+    public void startNewLevel(View view) {
+        int currentPlayerLevel = DataBaseGetter.getLevel() + 1;
+        if (currentPlayerLevel <= chosenLevel) {
+            Toast toast = Toast.makeText(this, "Сперва пройдите уровень " + currentPlayerLevel + "!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP, 0,160);   // import android.view.Gravity;
+            toast.show();
+        }
+        else
+            switch (chosenLevel) {
+                case (0):
+                    startActivity(
+                            new Intent(Level_Menu.this, Activity_level_1.class)
+                    );
+                case (1):
+                    ;
+            }
     }
 }
