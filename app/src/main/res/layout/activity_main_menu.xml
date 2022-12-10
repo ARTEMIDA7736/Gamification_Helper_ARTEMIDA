@@ -37,23 +37,15 @@
                 android:textSize="20sp"
                 android:id="@+id/CoinCounterMainMenu"
                 android:layout_margin="10dp"/>
-            <Button
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="MM"
-                android:background="@drawable/round_back_red"
-                android:onClick="startMenuActivityFromLevelMenu"
-                />
         </LinearLayout>
     <View
         android:background="#FF000000"
         android:layout_height="1dp"
         android:layout_width="fill_parent"
-
         android:layout_marginHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="@id/hat"
         app:layout_constraintBottom_toBottomOf="@id/hat"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"/>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/GoToLevels"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"

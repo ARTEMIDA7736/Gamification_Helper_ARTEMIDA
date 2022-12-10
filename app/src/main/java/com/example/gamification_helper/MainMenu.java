@@ -15,6 +15,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
         coinViewMainMenu = findViewById(R.id.CoinCounterMainMenu);
         levelViewMainMenu = findViewById(R.id.LevelCounterMainMenu);
         avatarImage = findViewById(R.id.avatarView);

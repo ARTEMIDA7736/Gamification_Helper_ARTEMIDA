@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         db = getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
         DataBaseGetter.initDataBase();
-        Intent startMainMenu = new Intent(this, MainMenu.class);
-        startActivity(startMainMenu);
+        startActivity(new Intent(this, MainMenu.class));
     }
 }

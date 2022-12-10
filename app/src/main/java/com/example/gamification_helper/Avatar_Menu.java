@@ -62,10 +62,10 @@ public class Avatar_Menu extends AppCompatActivity {
         for (LinearLayout curAvatar : avatars) {
             if (curAvatar == chosenAvatar) {
                 imageAvatarId = (int) chosenAvatar.getTag();
-                chosenAvatar.setBackgroundResource(R.drawable.round_back_fon);
+                chosenAvatar.setBackgroundResource(R.drawable.round_back_white_stroke10);
             }
             else
-                curAvatar.setBackgroundResource(R.drawable.round_back_white);
+                curAvatar.setBackgroundResource(R.drawable.round_back_red);
         }
     }
 

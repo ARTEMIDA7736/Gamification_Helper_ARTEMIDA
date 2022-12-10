@@ -43,8 +43,7 @@
             android:layout_height="30dp"
             android:text="MM"
             android:background="@drawable/round_back_red"
-            android:onClick="startMenuActivityFromLevelMenu"
-            />
+            android:onClick="startMenuActivityFromLevelMenu" />
         </LinearLayout>
     <View
         android:background="#FF000000"
@@ -60,7 +59,7 @@
         android:layout_width="200dp"
         android:layout_height="65dp"
         android:layout_marginEnd="104dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="20dp"
         android:textSize="25dp"
         android:backgroundTint="@color/dark_buttons"
         android:text="Начать"
@@ -88,11 +87,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="530dp"
         android:layout_above="@+id/GoToCurrentLevel"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="10dp"
+        android:paddingBottom="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -314,8 +314,6 @@
                 android:orientation="horizontal"
                 android:weightSum="2"
                 app:layout_constraintStart_toStartOf="parent"
-
-
                 app:layout_constraintTop_toBottomOf="@+id/line_1"
                 tools:ignore="MissingConstraints">
 
@@ -355,7 +353,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
@@ -368,10 +365,8 @@
                         android:textSize="20sp" />
                 </LinearLayout>
 
-
             </LinearLayout>
             // Конец четвёртой линии
-
         </LinearLayout>
     </ScrollView>
 
