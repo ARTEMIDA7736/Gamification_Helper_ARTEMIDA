@@ -28,19 +28,23 @@ public class Avatar_Menu extends AppCompatActivity {
 
         avatarImage = findViewById(R.id.avatarView);
         HatMaker.makeHat(levelViewAvatar, coinViewAvatar, avatarImage);
-        final LinearLayout frog = findViewById(R.id.frog),
-                alien = findViewById(R.id.alien),
-                knight = findViewById(R.id.knight),
-                monster = findViewById(R.id.monster),
-                rapper = findViewById(R.id.rapper),
-                zombie = findViewById(R.id.zombie),
-                mouse = findViewById(R.id.mouse),
-                spaceman = findViewById(R.id.spaceman),
-                stealman = findViewById(R.id.thief);
+        final LinearLayout avatar1 = findViewById(R.id.avatar1),
+                avatar2 = findViewById(R.id.avatar2),
+                avatar3 = findViewById(R.id.avatar3),
+                avatar4 = findViewById(R.id.avatar4),
+                avatar5 = findViewById(R.id.avatar5),
+                avatar6 = findViewById(R.id.avatar6),
+                avatar7 = findViewById(R.id.avatar7),
+                avatar8 = findViewById(R.id.avatar8),
+                avatar9 = findViewById(R.id.avatar9),
+                avatar10 = findViewById(R.id.avatar10),
+                avatar11 = findViewById(R.id.avatar11),
+                avatar12 = findViewById(R.id.avatar12);
 
         avatars = new LinearLayout[]{
-                frog, alien, knight, monster, rapper,
-                zombie, mouse, spaceman, stealman
+                avatar1, avatar2, avatar3, avatar4,
+                avatar5, avatar6, avatar7, avatar8,
+                avatar9, avatar10, avatar11, avatar12
         };
 
         listenerSetter();

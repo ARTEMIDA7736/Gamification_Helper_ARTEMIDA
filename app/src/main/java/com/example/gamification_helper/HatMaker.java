@@ -6,12 +6,12 @@ import android.widget.TextView;
 
 public class HatMaker extends DataBaseGetter {
     private static int coinCounter, currentLevel, avatarImage;
-
+    private static String currentStatus;
 
     private static void makeCoinCounter(TextView coinCounterView) {
         coinCounter = DataBaseGetter.getCoins();
         coinCounterView.setText(
-                String.format("Ваша валюта: %d", coinCounter)
+                String.format("%d$", coinCounter)
         );
     }
 
@@ -19,6 +19,13 @@ public class HatMaker extends DataBaseGetter {
         currentLevel = DataBaseGetter.getLevel();
         levelView.setText(
                 String.format("Ваш уровень: %d", currentLevel)
+        );
+    }
+
+    private static void makeCurrentStatus(TextView levelView) {
+        currentStatus = DataBaseGetter.getStatus();
+        levelView.setText(
+                String.format("%s", currentStatus)
         );
     }
 
@@ -31,7 +38,7 @@ public class HatMaker extends DataBaseGetter {
 
     static void makeHat(TextView levelView, TextView coinCounterView, ImageView avatarView) {
         makeCoinCounter(coinCounterView);
-        makeCurrentLevel(levelView);
+        makeCurrentStatus(levelView);
         makeCurrentAvatar(avatarView);
     }
 }

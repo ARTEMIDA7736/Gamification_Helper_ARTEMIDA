@@ -9,8 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Achievments_Activity extends AppCompatActivity {
-    private TextView coinViewAchievements, levelViewAchievements;
+    private TextView coinViewAchievements, levelViewAchievements,
+            achiev1, achiev2, achiev3, achiev4;
     ImageView avatarImage;
+    TextView[] listOfAchieve;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,18 @@ public class Achievments_Activity extends AppCompatActivity {
         avatarImage = findViewById(R.id.avatarView);
         HatMaker.makeHat(levelViewAchievements, coinViewAchievements, avatarImage);
         avatarImage.setOnClickListener(view -> startAvatarActivityFromAchievementMenu());
+        achiev1 = findViewById(R.id.ach1);
+        achiev2 = findViewById(R.id.ach2);
+        achiev3 = findViewById(R.id.ach3);
+        achiev4 = findViewById(R.id.ach4);
+        listOfAchieve = new TextView[] {
+                achiev1, achiev2, achiev3, achiev4
+        };
+
+        for (int i = 0; i < listOfAchieve.length; i++) {
+            if (DataBaseGetter.isUnlockedAchievement(i) == 1)
+                listOfAchieve[i].setText("Unlocked");
+        }
     }
 
     public void startMenuActivityFromAchievements(View view) {

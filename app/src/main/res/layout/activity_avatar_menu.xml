@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ezgif_com_gif_maker"
     tools:context=".Avatar_Menu">
 
     <LinearLayout
@@ -11,6 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
         android:id="@+id/hat">
 
         <LinearLayout
@@ -19,36 +21,49 @@
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
-
+                android:layout_weight="5"
                 android:layout_height="50dp"
                 android:id="@+id/avatarView"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/LevelCounterAvatar"
+                android:fontFamily="@font/mainfont"
+                android:layout_weight="35"
+                android:textAlignment="center"
+                android:textSize="20sp"
                 android:layout_margin="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:layout_weight="10"
                 android:layout_alignParentEnd="true"
+                android:textSize="20sp"
                 android:id="@+id/CoinCounterAvatar"
                 android:layout_margin="10dp"/>
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="MM"
+                android:background="@drawable/round_back_red"
+                android:onClick="startMenuActivityFromAvatar"
+                />
         </LinearLayout>
+        <View
+            android:layout_marginTop="8dp"
+            android:background="#FF000000"
+            android:layout_height="1dp"
+            android:layout_width="fill_parent"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:id="@+id/fromAvatarToAchievements"
-                android:onClick="startMenuActivityFromAvatar"
-                android:text="@string/toMainMenu"/>
+
         <TextView
             android:id="@+id/choice"
             android:layout_width="134dp"
             android:layout_height="61dp"
-            android:layout_marginStart="104dp"
+            android:layout_marginStart="90dp"
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="@string/choice"
@@ -64,7 +79,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:gravity="center"
             android:text="@string/ava"
             android:textColor="@color/logo_name_col"
@@ -78,7 +93,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
 
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             app:srcCompat="@drawable/anime_o1xevfz62tf4" />
@@ -100,12 +115,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp">
 
                     <LinearLayout
                         android:id="@+id/firstLay"
-                        android:layout_width="394dp"
+                        android:layout_width="380dp"
                         android:layout_height="157dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="10dp"
@@ -118,7 +133,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/frog"
+                            android:id="@+id/avatar1"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -130,17 +145,18 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/frog_lay"
-                                android:layout_width="127dp"
-                                android:layout_height="157dp"
-                                android:src="@drawable/frog_kyi1y4kk5ap9" />
+                                android:id="@+id/avatar1_lay"
+                                android:layout_width="100dp"
+                                android:layout_height="150dp"
+
+                                android:src="@drawable/avatar1" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
 
-                            android:id="@+id/alien"
+                            android:id="@+id/avatar2"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -152,16 +168,16 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/alien_lay"
+                                android:id="@+id/avatar2_lay"
                                 android:layout_width="130dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/alien_94cbcc2kzvti" />
+                                android:src="@drawable/avatar2" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/knight"
+                            android:id="@+id/avatar3"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
@@ -173,10 +189,10 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/knight_lay"
+                                android:id="@+id/avatar3_lay"
                                 android:layout_width="130dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/knight_uk6woeyexy7p" />
+                                android:src="@drawable/avatar3" />
 
 
                         </LinearLayout>
@@ -184,7 +200,7 @@
 
                     <LinearLayout
                         android:id="@+id/secLay"
-                        android:layout_width="394dp"
+                        android:layout_width="380dp"
                         android:layout_height="157dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
@@ -197,7 +213,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/monster"
+                            android:id="@+id/avatar4"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -209,16 +225,16 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/monster_lay"
+                                android:id="@+id/avatar4_lay"
                                 android:layout_width="127dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/monster_cukoa9qsxmp0" />
+                                android:src="@drawable/avatar4" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/rapper"
+                            android:id="@+id/avatar5"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -230,16 +246,16 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/rapper_lay"
+                                android:id="@+id/avatar5_lay"
                                 android:layout_width="127dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/rapper_yjf2xnpd4p2f" />
+                                android:src="@drawable/avatar5" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/zombie"
+                            android:id="@+id/avatar6"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
@@ -251,10 +267,10 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/zombie_lay"
+                                android:id="@+id/avatar6_lay"
                                 android:layout_width="130dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/zombie_ogjg6h1r9eb8" />
+                                android:src="@drawable/avatar6" />
 
 
                         </LinearLayout>
@@ -262,7 +278,7 @@
 
                     <LinearLayout
                         android:id="@+id/thirdLay"
-                        android:layout_width="394dp"
+                        android:layout_width="380dp"
                         android:layout_height="157dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
@@ -272,10 +288,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/secLay">
-
-
                         <LinearLayout
-                            android:id="@+id/mouse"
+                            android:id="@+id/avatar7"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -287,16 +301,16 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/mouse_lay"
+                                android:id="@+id/avatar7_lay"
                                 android:layout_width="127dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/rat_8fojzyg8yvpl" />
+                                android:src="@drawable/avatar7" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/spaceman"
+                            android:id="@+id/avatar8"
                             android:layout_width="25dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -308,16 +322,16 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/spacekid_lay"
+                                android:id="@+id/avatar8_lay"
                                 android:layout_width="127dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/spaceman_dtv71bg3oumg" />
+                                android:src="@drawable/avatar8" />
 
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/thief"
+                            android:id="@+id/avatar9"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
@@ -329,15 +343,88 @@
 
                             <ImageView
                                 android:padding="10dp"
-                                android:id="@+id/stealman_lay"
+                                android:id="@+id/avatar9_lay"
                                 android:layout_width="125dp"
                                 android:layout_height="157dp"
-                                android:src="@drawable/thief_czzr913kcaxs" />
+                                android:src="@drawable/avatar9" />
 
 
                         </LinearLayout>
                     </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/fourthLay"
+                        android:layout_width="380dp"
+                        android:layout_height="157dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/secLay">
+                        <LinearLayout
+                            android:id="@+id/avatar10"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_back_white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="0dp">
 
+                            <ImageView
+                                android:padding="10dp"
+                                android:id="@+id/avatar10_lay"
+                                android:layout_width="127dp"
+                                android:layout_height="157dp"
+                                android:src="@drawable/avatar10" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/avatar11"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_back_white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <ImageView
+                                android:padding="10dp"
+                                android:id="@+id/avatar11_lay"
+                                android:layout_width="127dp"
+                                android:layout_height="157dp"
+                                android:src="@drawable/avatar11" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/avatar12"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_back_white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <ImageView
+                                android:padding="10dp"
+                                android:id="@+id/avatar12_lay"
+                                android:layout_width="125dp"
+                                android:layout_height="157dp"
+                                android:src="@drawable/avatar12" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
