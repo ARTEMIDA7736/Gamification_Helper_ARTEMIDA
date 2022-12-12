@@ -42,12 +42,6 @@
                 android:textSize="20sp"
                 android:id="@+id/CoinCounterAvatar"
                 android:layout_margin="10dp"/>
-            <Button
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="MM"
-                android:background="@drawable/round_back_red"
-                android:onClick="startMenuActivityFromAvatar" />
         </LinearLayout>
         <View
             android:layout_marginTop="8dp"
@@ -70,32 +64,6 @@
             android:textSize="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true" />
-
-        <TextView
-            android:id="@+id/ava"
-            android:layout_width="156dp"
-            android:layout_height="61dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:text="@string/ava"
-            android:textColor="@color/logo_name_col"
-            android:textSize="40dp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="72dp"
-            android:layout_height="61dp"
-            android:layout_alignStart="@+id/choice"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="32dp"
-            app:srcCompat="@drawable/anime_o1xevfz62tf4" />
 
         <ScrollView
             android:layout_width="match_parent"

@@ -23,6 +23,11 @@ public class MainMenu extends AppCompatActivity {
         avatarImage.setOnClickListener(view -> startAvatarActivityFromMainMenu());
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        HatMaker.makeHat(levelViewMainMenu, coinViewMainMenu, avatarImage);
+    }
 
     public void startAvatarActivityFromMainMenu() {
         Intent startAvatarMenu = new Intent(this, Avatar_Menu.class);

@@ -53,7 +53,6 @@ public class Level_1 extends AppCompatActivity {
 
                 selectedTopic = "answer_3";
                 answer_3.setBackgroundResource(R.drawable.round_back_white_stroke10);
-
                 answer_1.setBackgroundResource(R.drawable.round_back_red);
                 answer_2.setBackgroundResource(R.drawable.round_back_red);
 

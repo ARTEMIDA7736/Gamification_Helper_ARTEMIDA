@@ -70,6 +70,12 @@ public class Level_Menu extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        HatMaker.makeHat(levelViewLevelMenu, coinViewLevelMenu, avatarImage);
+    }
+
     private void setAllLevelButtonListeners() {
         int i = 0;
         for (LinearLayout curLayout : level_list) {
@@ -81,7 +87,6 @@ public class Level_Menu extends AppCompatActivity {
     public void startMenuActivityFromLevelMenu(View view) {
         Intent startMainMenu = new Intent(this, MainMenu.class);
         startActivity(startMainMenu);
-        finish();
     }
 
     private void startNewLevel(Class chosenLevel) {

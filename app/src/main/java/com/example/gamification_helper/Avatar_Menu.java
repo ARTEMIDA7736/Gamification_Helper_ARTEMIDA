@@ -50,6 +50,12 @@ public class Avatar_Menu extends AppCompatActivity {
         listenerSetter();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        HatMaker.makeHat(levelViewAvatar, coinViewAvatar, avatarImage);
+    }
+
     private void listenerSetter() {
         int i = 0;
         for (LinearLayout curLayout : avatars) {
@@ -72,7 +78,6 @@ public class Avatar_Menu extends AppCompatActivity {
     public void startMenuActivityFromAvatar(View view) {
         Intent startMainMenu = new Intent(this, MainMenu.class);
         startActivity(startMainMenu);
-        finish();
     }
 
     public void acceptNewAvatar(View view) {

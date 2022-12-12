@@ -38,12 +38,6 @@
                 android:textSize="20sp"
                 android:id="@+id/CoinCounterLevelMenu"
                 android:layout_margin="10dp"/>
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:text="MM"
-            android:background="@drawable/round_back_red"
-            android:onClick="startMenuActivityFromLevelMenu" />
         </LinearLayout>
     <View
         android:background="#FF000000"

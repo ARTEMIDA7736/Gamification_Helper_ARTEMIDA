@@ -40,12 +40,6 @@
                 android:textSize="20sp"
                 android:id="@+id/CoinCounterAchievements"
                 android:layout_margin="10dp"/>
-            <Button
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="MM"
-                android:background="@drawable/round_back_red"
-                android:onClick="startMenuActivityFromAchievements" />
         </LinearLayout>
         <View
             android:layout_marginTop="8dp"
